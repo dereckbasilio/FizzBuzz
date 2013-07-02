@@ -10,8 +10,12 @@ namespace FizzBuzz
     {
         static void Main(string[] args)
         {
-            var fizzBuzz = new FizzBuzzClass();
-            fizzBuzz.GenerateFizzBuzz(10,30);
+            var fizzBuzz = new FizzBuzzClass().GenerateFizzBuzz(10, 30);
+
+            for (int i = 0; i < 100; i++)
+            {
+                Console.WriteLine(fizzBuzz[i]);
+            }
             Console.ReadLine();
         }
     }

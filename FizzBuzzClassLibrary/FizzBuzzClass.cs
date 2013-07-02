@@ -7,32 +7,36 @@ namespace FizzBuzzClassLibrary
 {
     interface IFizzBuzz
     {
-        void GenerateFizzBuzz(int begin,int end);
+        string GenerateFizzBuzz(int value);
     }
 
-    public class FizzBuzzClass:IFizzBuzz
+    public class FizzBuzzClass//:IFizzBuzz
     {
-        public void GenerateFizzBuzz(int begin, int end)
+        public string[] GenerateFizzBuzz(int begin, int end)
         {
-            for (int i = begin; i <= end; i++)
+            int value = begin;
+            string[] fizzbuzz= new string[100];
+            for (int i = 0; i < (end - begin) + 1; i++)
             {
-                if (i % 15 == 0)
+                if (value % 15 == 0)
                 {
-                    Console.WriteLine("FizzBuzz");
+                    fizzbuzz[i] = "FizzBuzz";
                 }
-                else if (i % 5 == 0)
+                else if (value % 5 == 0)
                 {
-                    Console.WriteLine("Buzz");
+                    fizzbuzz[i] = "Buzz";
                 }
-                else if (i % 3 == 0)
+                else if (value % 3 == 0)
                 {
-                    Console.WriteLine("Fizz");
+                    fizzbuzz[i] = "Fizz";
                 }
                 else
                 {
-                    Console.WriteLine(i);
+                    fizzbuzz[i] = value.ToString();
                 }
+                value++;
             }
+            return fizzbuzz;
         }
     }
 }
