@@ -5,7 +5,12 @@ using System.Text;
 
 namespace FizzBuzzClassLibrary
 {
-    public class FizzBuzzClass
+    interface IFizzBuzz
+    {
+        void GenerateFizzBuzz(int begin,int end);
+    }
+
+    public class FizzBuzzClass:IFizzBuzz
     {
         public void GenerateFizzBuzz(int begin, int end)
         {
