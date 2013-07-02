@@ -7,9 +7,9 @@ namespace FizzBuzzClassLibrary
 {
     public class FizzBuzzClass
     {
-        public void GenerateFizzBuzz()
+        public void GenerateFizzBuzz(int begin, int end)
         {
-            for (int i = 1; i <= 100; i++)
+            for (int i = begin; i <= end; i++)
             {
                 if (i % 15 == 0)
                 {

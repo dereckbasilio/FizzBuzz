@@ -11,7 +11,7 @@ namespace FizzBuzz
         static void Main(string[] args)
         {
             var fizzBuzz = new FizzBuzzClass();
-            fizzBuzz.GenerateFizzBuzz();
+            fizzBuzz.GenerateFizzBuzz(10,30);
             Console.ReadLine();
         }
     }
